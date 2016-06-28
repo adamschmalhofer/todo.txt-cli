@@ -107,12 +107,7 @@ case "$TODO_NOTE_ACTION" in
     echo $item $todo
     echo TODO: Note added to task $item.
 
-    echo "Edit note?  (y/n)"
-    read ANSWER
-    if [ "$ANSWER" = "y" ]
-    then
-        editnote "$TODO_NOTES_DIR/${notename}"
-    fi
+    editnote "$TODO_NOTES_DIR/${notename}"
     ;;
 
 "edit" | "e")
