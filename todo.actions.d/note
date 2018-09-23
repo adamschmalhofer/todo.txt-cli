@@ -129,6 +129,12 @@ case "$TODO_NOTE_ACTION" in
     cat "$notefilepath"
     ;;
 
+"path" | "p")
+    errmsg="usage: $TODO_SH $(basename $0) path|p ITEM#|archive|a"
+    getnotefilepath $*
+    echo "$notefilepath"
+    ;;
+
 "__archive")
     getnotenamefromtext "$*"
 
